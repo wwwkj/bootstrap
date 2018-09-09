@@ -50,13 +50,6 @@ var browsers = {
     browser: 'IE',
     browser_version: '8.0'
   },
-  ie7WinXP: {
-    base: 'BrowserStack',
-    os: 'Windows',
-    os_version: 'XP',
-    browser: 'IE',
-    browser_version: '7.0'
-  },
   'chromeWin8.1': {
     base: 'BrowserStack',
     os: 'Windows',
