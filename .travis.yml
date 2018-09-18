@@ -16,7 +16,6 @@ before_install:
   - if [ "$TRAVIS_REPO_SLUG" = twbs-savage/bootstrap ]; then export TWBS_DO_VALIDATOR=0; fi
 install:
   - bundle install --deployment --jobs=1
-  - cp grunt/npm-shrinkwrap.json ./
   - npm install
 # Undo `_JAVA_OPTIONS` environment variable;
 # see https://github.com/travis-ci/travis-ci/issues/8408
