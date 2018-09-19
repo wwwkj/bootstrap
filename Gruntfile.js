@@ -181,6 +181,13 @@ module.exports = function (grunt) {
         },
         src: 'docs/assets/less/docs.less',
         dest: 'docs/assets/css/docs.css'
+      },
+      compileDocsIe: {
+        options: {
+          sourceMap: false
+        },
+        src: 'docs/assets/less/ie10-viewport-bug-workaround.less',
+        dest: 'docs/assets/css/ie10-viewport-bug-workaround.css'
       }
     },
 
@@ -395,7 +402,7 @@ module.exports = function (grunt) {
   grunt.registerTask('dist-js', ['concat', 'uglify:core', 'commonjs']);
 
   // CSS distribution task.
-  grunt.registerTask('less-compile', ['less:compileCore', 'less:compileTheme', 'less:compileDocs']);
+  grunt.registerTask('less-compile', ['less:compileCore', 'less:compileTheme', 'less:compileDocs', 'less:compileDocsIe']);
   grunt.registerTask('dist-css', ['less-compile', 'autoprefixer:core', 'autoprefixer:theme', 'cssmin:minifyCore', 'cssmin:minifyTheme']);
 
   // Full distribution task.
